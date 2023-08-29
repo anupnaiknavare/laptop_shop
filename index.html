@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="Image/logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="https://www.hp.com/in-en/home.html">Home</a></li>
+                    <li><a href="https://www.hp.com/in-en/shop/hp-laptops">Laptop</a></li>
+                    <li><a href="https://www.hp.com/in-en/shop/accessories.html">Accessories</a></li>
+                    <li><a href="https://www.hp.com/in-en/shop/checkout/cart/">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="Image/laptop.png" class="laptop"> 
+            <h1>sdffff</h1>
+            <div id="circle">
+                <div class="feature one">
+                    <img src="Image/battrey.png">
+                    <div>
+                        <h1>Batter life</h1>
+                        <p>1200mAh, 4Hrs</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="Image/processer.png">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>i9,12th(Gen)</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="Image/screen.png">
+                    <div>
+                        <h1>screen</h1>
+                        <p>15inch</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="Image/ssd.png">
+                    <div>
+                        <h1>SSD</h1>
+                        <p>512GB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="Image/arow.png" id="upbtn">
+            <h3>Features</h3>
+            <img src="Image/arow.png" id="downbtn">
+        </div>
+
+    </div>
+
+
+    <script>
+        var circle= document.getElementById("circle");
+        var upbtn= document.getElementById("upbtn");
+        var downbtn= document.getElementById("downbtn");
+
+        var rotatevalue = circle.style.transform;
+        var rotatesum;
+        
+        upbtn.onclick=function()
+        {
+            rotatesum =rotatevalue + "rotate(-90deg)";
+            circle.style.transform=rotatesum;
+            rotatevalue= rotatesum;
+        }
+
+        downbtn.onclick=function()
+        {
+            rotatesum =rotatevalue + "rotate(90deg)";
+            circle.style.transform=rotatesum;
+            rotatevalue= rotatesum;
+        }
+    </script>
+</body>
+</html>
